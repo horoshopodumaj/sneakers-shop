@@ -12,11 +12,7 @@ export default function Favorites({ onFavorite }) {
             </div>
             <div className="d-flex flex-wrap card-container">
                 {favorites.map((sneaker) => (
-                    <Card
-                        key={sneaker.id}
-                        onFavorite={onFavorite}
-                        {...sneaker}
-                    />
+                    <Card key={sneaker.id} {...sneaker} />
                 ))}
             </div>
         </div>
