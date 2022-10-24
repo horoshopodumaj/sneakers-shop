@@ -14,6 +14,8 @@
 - реализовано отображение заказанных товаров;
 - реализован подсчет общей суммы товаров в корзине (с отображением в корзине и на главной странице).
 
+Все этапы разработки проекта представлены в репозитории https://github.com/horoshopodumaj/React-sneakers
+
 
 ---
 
@@ -30,3 +32,5 @@
 - implemented the display of products on the main page already added to bookmarks;
 - implemented display of ordered goods;
 - implemented the calculation of the total amount of goods in the basket (with display in the basket and on the main page).
+
+All stages of project development are presented in the repository https://github.com/horoshopodumaj/React-sneakers
