@@ -6,8 +6,7 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 * {
@@ -20,10 +19,43 @@ code {
     border-radius: 20px;
     max-width: 1080px;
     margin: 50px auto;
+    @media screen and (max-width: 1024px) and (min-width: 601px) {
+        margin: 40px auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 20px auto;
+    }
 }
 
 header {
     border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    @media screen and (max-width: 1024px) {
+        padding: 30px;
+    }
+
+    @media screen and (max-width: 600px) and (min-width: 518px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 517px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .list {
+        display: flex;
+        @media screen and (max-width: 600px) and (min-width: 518px) {
+            justify-content: space-between;
+        }
+    }
 }
 
 h3,
@@ -32,13 +64,52 @@ p {
 }
 
 .content {
-    h1 {
+    padding: 40px;
+    @media screen and (max-width: 1024px) {
+        padding: 30px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 600px) and (min-width: 518px) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        @media screen and (max-width: 517px) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    &__title {
         margin: 0;
         overflow-wrap: anywhere;
     }
 }
 .card-container {
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-between;
+    @media screen and (max-width: 1049px) and (min-width: 1000px) {
+        gap: 20px;
+    }
+    @media screen and (max-width: 999px) and (min-width: 820px) {
+        justify-content: center;
+        gap: 50px;
+    }
+    @media screen and (max-width: 819px) {
+        gap: 18px;
+        justify-content: center;
+    }
 }
 .button {
     box-sizing: border-box;
@@ -55,6 +126,7 @@ p {
     border-radius: 10px;
     padding: 0 15px;
     position: relative;
+    display: flex;
 
     .clear {
         position: absolute;

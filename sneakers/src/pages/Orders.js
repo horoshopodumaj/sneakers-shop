@@ -13,9 +13,7 @@ export default function Orders() {
                 const { data } = await axios.get(
                     "https://634d55e6f5d2cc648ea33890.mockapi.io/orders"
                 );
-                setOrders(
-                    data.reduce((prev, obj) => [...prev, ...obj.items], [])
-                );
+                setOrders(data.reduce((prev, obj) => [...prev, ...obj.items], []));
                 setIsLoading(false);
             } catch (error) {
                 alert("Что-то пошло не так");
@@ -24,17 +22,13 @@ export default function Orders() {
         })();
     }, []);
     return (
-        <div className="content p-40">
+        <div className="content">
             <div className="d-flex align-center mb-40 justify-between">
                 <h1>Мои заказы</h1>
             </div>
-            <div className="d-flex flex-wrap card-container">
+            <div className="card-container">
                 {(isLoading ? [...Array(12)] : orders).map((sneaker) => (
-                    <Card
-                        key={sneaker && sneaker.id}
-                        {...sneaker}
-                        isLoading={isLoading}
-                    />
+                    <Card key={sneaker && sneaker.id} {...sneaker} isLoading={isLoading} />
                 ))}
             </div>
         </div>

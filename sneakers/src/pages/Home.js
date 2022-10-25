@@ -33,14 +33,12 @@ export default function Home({
     };
 
     return (
-        <div className="content p-40">
-            <div className="d-flex align-center mb-40 justify-between">
-                <h1>
-                    {searchValue
-                        ? `Поиск по запросу: "${searchValue}"`
-                        : "Все кроссовки"}
+        <div className="content">
+            <div className=" content__container">
+                <h1 className="content__title">
+                    {searchValue ? `Поиск по запросу: "${searchValue}"` : "Все кроссовки"}
                 </h1>
-                <div className="search-block d-flex">
+                <div className="search-block">
                     <img src="img/search.svg" alt="search" />
                     {searchValue && (
                         <img
@@ -58,9 +56,7 @@ export default function Home({
                 </div>
             </div>
 
-            <div className="d-flex flex-wrap card-container">
-                {renderItems()}
-            </div>
+            <div className="card-container">{renderItems()}</div>
         </div>
     );
 }
